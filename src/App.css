@@ -1,38 +1,143 @@
-.App {
-  text-align: center;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(18,18,18);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navb{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    color: rgb(208,209,212);
+    align-items: center;
+    justify-content: left;
+    font-weight: 800;
+    padding: 10px;
+    background-color: rgb(86,83,83);
+    margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.searchbar{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+    color: white;
+}
+.searchbar input{
+    background-color: rgb(18,18,18);
+    border: none;
+    border-bottom: 2px solid white; 
+    outline: 0;
+    padding: 4px;
+    width: 40%;
+    color: white;
+}
+
+.searchbar button{
+    background-color: rgb(18,18,18);
+
+}
+
+.dispSong{
+    display: flex;
+    justify-content: center;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+}
+.DisplayData{
+    flex: 1 1 calc(33.33% - 10px);
+    margin: 5px;
+    padding: 8px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: rgb(34,34,34);
+    font-family: cursive;
+    color: white;
+    
+}
+
+
+.img{
+    text-align: center;
+    margin-bottom: 8px;
+    margin-top: 5px;
+    background-color: rgb(34, 34, 34);
+
+}
+
+h4{
+    background-color: rgb(34,34,34);
+}
+
+.LyricsButton{
+    color: white;
+    width: 100px;
+    border: none;
+    background-color: rgb(18,18,18);
+    padding: 6px;
+
+}
+
+.LyricsButton:hover{
+    background-color: rgb(116, 110, 110);
+}
+
+.modalx{
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    border: 1px ridge white;
+    color: white;
+    background-color: white;
+    z-index: 10;
+    height: 80vh;
+    width: 60vw;
+    overflow: auto;
+    background-color: rgb(18,18,18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalx p{
+    padding: 5px 0px 5px 20px;
+    text-align: center;
+    line-height: 9px;
+    font-family: 'News Cycle', sans-serif;
+    font-size: 22px;
+    background-color: rgb(18,18,18);
+}
+
+.is-blurred {
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
   }
+
+.modButton{
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width: 30px;
+    font-weight: 600;
+    background-color: rgb(206, 202, 202);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.modButton:hover{
+   background-color: red;
+   color: white;
+}
+.searchbar button{
+    font-size: 25px;
+    padding: 4px 7px 7px 4px;
+    border: none;
+    color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.errorMessage{
+width: 65%;
+background-color: rgb(18,18,18);
 }
