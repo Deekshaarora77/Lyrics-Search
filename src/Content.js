@@ -1,17 +1,21 @@
 import React, { useState } from 'react';
 import Modal from './Modal.js'
-import {FiSearch} from 'react-icons/fi'
+import { FiSearch } from 'react-icons/fi'
+import Loader from './Loader.js';
 const Content = () => {
     const [list, setList] = useState([]);
     const [search, setSearch] = useState("");
     const [IsOpen, setIsOpen] = useState(false);
+    const [loading, setLoading] = useState(false)
     const [modalState, setModalState] = useState({})
     const fetchData = async () => {
+        setLoading(true)
         const res = await fetch(`https://api.lyrics.ovh/suggest/${search}`)
         const result = await res.json()
         setList(result.data)
+        setLoading(false)
     }
-    
+
 
     const DispSong = list.map((d) => {
         return (
@@ -21,7 +25,7 @@ const Content = () => {
                 <h4>Song   : {d.title}</h4>
                 <h4>Artist : {d.artist.name}</h4>
                 <button className='LyricsButton' onClick={() => {
-                    setModalState({artist:d.artist.name,song:d.title})
+                    setModalState({ artist: d.artist.name, song: d.title })
                     setIsOpen(true)
                 }}>
                     Lyrics
@@ -45,13 +49,13 @@ const Content = () => {
 
     return (
         <div className='container'>
-            {IsOpen && <Modal setIsOpen={setIsOpen} modalState={modalState}/>}
+            {IsOpen && <Modal setIsOpen={setIsOpen} modalState={modalState} />}
             <form className='searchbar' onSubmit={handleSubmit}>
                 <input placeholder='Search song or artist' onChange={(e) => { setSearch(e.target.value) }} value={search} />
-                <button onClick={fetchData}><FiSearch/></button>
+                <button onClick={fetchData}><FiSearch /></button>
             </form>
             <div className='dispSong'>
-                {DispSong}
+                {loading?<Loader/>:DispSong}
             </div>
         </div>
     )
