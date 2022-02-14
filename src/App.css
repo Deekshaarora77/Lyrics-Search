@@ -48,6 +48,10 @@ body{
     flex-wrap: wrap;
 }
 .DisplayData{
+  display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
     flex: 1 1 calc(33.33% - 10px);
     margin: 5px;
     padding: 8px;
@@ -237,4 +241,54 @@ h4{
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
+}
+
+@media only screen and (max-width : 780px)
+{
+	
+	.searchbar input
+	{
+		width: 90%;
+		/* margin: 0 auto; */
+	}
+  .modalx{
+    width: 85vw;
+    font-size: 17px;
+  }
+  .modalx p p{
+    margin-bottom: 15px;
+    line-height: 20px;
+  }
+  .modButton{
+    right: 7.7vw;
+}
+#error-modal{
+  width: 60vw;
+  height: 50vh;
+}
+
+#error-button{
+  top: 25vh;
+  right: 20vw;
+}
+}
+
+@media only screen and (max-width : 600px)
+{
+  #error-modal{
+    width: 60vw;
+    height: 30vh;
+  }
+  #error-button{
+    top: 35vh;
+    right: 20vw;
+  }
+}
+.modal-container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f9f9f9d9;
 }
