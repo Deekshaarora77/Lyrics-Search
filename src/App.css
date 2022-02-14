@@ -128,8 +128,8 @@ h4{
     font-weight: 600;
     background-color: rgb(206, 202, 202);
     position: fixed;
-    right: 19.6vw;
-    top: 10vh;
+    right: 20.1%;
+    top: 10%;
     z-index: 20;
     /* transform: translate(-50%,-50%); */
 }
@@ -260,16 +260,16 @@ h4{
     line-height: 20px;
   }
   .modButton{
-    right: 7.7vw;
+    right: 7.7%;
 }
 #error-modal{
-  width: 60vw;
-  height: 50vh;
+  width: 60%;
+  height: 50%;
 }
 
 #error-button{
-  top: 25vh;
-  right: 20vw;
+  top: 25%;
+  right: 20%;
 }
 }
 
@@ -280,8 +280,8 @@ h4{
     height: 30vh;
   }
   #error-button{
-    top: 35vh;
-    right: 20vw;
+    top: 35%;
+    right: 20%;
   }
 }
 .modal-container{
