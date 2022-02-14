@@ -65,6 +65,7 @@ body{
     margin-bottom: 8px;
     margin-top: 5px;
     background-color: rgb(34, 34, 34);
+    max-width: 100%;
 
 }
 
